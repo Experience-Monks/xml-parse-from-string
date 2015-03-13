@@ -26,6 +26,10 @@ PRs for Node version welcome.
 
 [![NPM](https://nodei.co/npm/xml-parse-from-string.png)](https://www.npmjs.com/package/xml-parse-from-string)
 
+#### `root = parse(str)`
+
+Parses the string as XML and returns the `root` element as a DOM element, so you can do operations similar to `document.getElementById`, `document.getElementsByTagName`, and so forth.
+
 ## License
 
 MIT, see [LICENSE.md](http://github.com/Jam3/xml-parse-from-string/blob/master/LICENSE.md) for details.
