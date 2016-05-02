@@ -18,7 +18,7 @@ var tag = doc.getElementsByTagName('foobar')[0]
 console.log(tag.getAttribute('id')) // -> "blah"
 ```
 
-Be weary of subtle differences between implementations, such as case-sensitivity in `attribute.nodeName`.
+Be wary of subtle differences between implementations, such as case-sensitivity in `attribute.nodeName`.
 
 PRs for Node version welcome.
 
