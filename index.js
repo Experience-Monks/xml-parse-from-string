@@ -1,17 +1,17 @@
 module.exports = (function xmlparser() {
   //common browsers
-  if (typeof window.DOMParser !== 'undefined') {
+  if (typeof self.DOMParser !== 'undefined') {
     return function(str) {
-      var parser = new window.DOMParser()
+      var parser = new self.DOMParser()
       return parser.parseFromString(str, 'application/xml')
     }
   } 
 
   //IE8 fallback
-  if (typeof window.ActiveXObject !== 'undefined'
-      && new window.ActiveXObject('Microsoft.XMLDOM')) {
+  if (typeof self.ActiveXObject !== 'undefined'
+      && new self.ActiveXObject('Microsoft.XMLDOM')) {
     return function(str) {
-      var xmlDoc = new window.ActiveXObject("Microsoft.XMLDOM")
+      var xmlDoc = new self.ActiveXObject("Microsoft.XMLDOM")
       xmlDoc.async = "false"
       xmlDoc.loadXML(str)
       return xmlDoc
